@@ -45,7 +45,7 @@ docker build -t ballerina-user-service:latest .
 ### 2. Deploy with Helm
 
 Before deploying the application, we need to set up Prometheus monitors via Helm.
-	1.	Add the Prometheus repo (if not already added):
+1.	Add the Prometheus repo (if not already added):
  
     ```bash
     helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
