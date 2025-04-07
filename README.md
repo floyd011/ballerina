@@ -99,9 +99,9 @@ curl http://<your-k8s-service-ip>:8081/healthz
 
 If everything is working correctly, you should see the response:`"OK"`.
 
-## Dodatna podešavanja
+## Additional Configurations
 
-Ako želiš da dodas dodatne metrike ili modifikujete postojeće, slobodno ažuriraj Ballerina kod u `ballerina-app/main.bal` i Helm chart konfiguraciju.
+If you wish to add more metrics or modify the existing ones, feel free to update the Ballerina code in `ballerina-app/main.bal` and the Helm chart configuration.
 
 ## Kontakt
 
