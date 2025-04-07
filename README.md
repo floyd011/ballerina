@@ -1,28 +1,28 @@
 # Ballerina Observability Starter Kit
 
-Ovaj starter kit sadrži osnovnu Ballerina aplikaciju koja je integrisana sa Prometheus-om i Grafana-om za praćenje metrika. Takođe uključuje Helm chart za jednostavno postavljanje na Kubernetes klaster.
+This starter kit contains a basic Ballerina application integrated with Prometheus and Grafana for monitoring metrics. It also includes a Helm chart for easy deployment on a Kubernetes cluster.
 
-## Komponente
+## Components
 
-- **Ballerina aplikacija**: REST servis sa health endpointom i custom metrikama.
-- **Prometheus**: Za prikupljanje metrika.
-- **Grafana**: Za vizualizaciju metrika.
-- **AlertManager**: Za slanje notifikacija na osnovu pravila.
-- **Helm Chart**: Za jednostavan deploy na Kubernetes.
+- **Ballerina App**: A REST service with a health endpoint and custom metrics.
+- **Prometheus**: Collects application metrics and exposes them for visualization and alerting.
+- **Grafana**: Visualizes your metrics with beautiful, customizable dashboards.
+- **AlertManager**: Sends notifications based on alerting rules.
+- **Helm Chart**: For easy deployment on Kubernetes.
 
-## Pre-rekviziti
+## Prerequisites
 
-Pre nego što počneš sa deploy-om, uveri se da imaš sledeće instalirano:
-- Kubernetes klaster (lokalno ili cloud-based)
+Before starting the deployment, ensure you have the following installed:
+- A Kubernetes cluster (local or cloud-based)
 - Helm 3
-- Prometheus i Grafana instalirani u klasteru
-- Docker (ako želiš graditi slike lokalno)
+- Prometheus and Grafana installed in the cluster
+- Docker (if you want to build images locally)
 
 ## Deploy
 
-### 1. Build Docker sliku za Ballerina aplikaciju
+### 1. Build Docker Image for Ballerina Application
 
-Prvo trebaš da izgradimo Docker sliku za tvoju Ballerina aplikaciju. U root direktorijumu repozitorijuma kreiraj `Dockerfile`:
+First, we need to build a Docker image for your Ballerina application. Create a `Dockerfile` in the root directory of the repository:
 
 ```Dockerfile
 FROM ballerina/ballerina:slbeta
@@ -36,58 +36,58 @@ RUN ballerina build main.bal
 CMD ["bal", "run", "main.bal"]
 ```
 
-Zatim, izgradite Docker sliku:
+Then, build the Docker image:
 
 ```bash
 docker build -t ballerina-user-service:latest .
 ```
 
-### 2. Deploy sa Helm-om
+### 2. Deploy with Helm
 
-Pre nego što implementiraš aplikaciju, trebaš da napraviš Prometheus monitore putem Helm-a.
-
-1. Dodaj Prometheus repo (ako već nije dodan):
-
+Before deploying the application, we need to set up Prometheus monitors via Helm.
+	1.	Add the Prometheus repo (if not already added):
+ 
     ```bash
     helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
     helm repo update
     ```
 
-2. Deploy Prometheus i Grafana:
+2.	Deploy Prometheus and Grafana:
 
     ```bash
     helm install prometheus prometheus-community/kube-prometheus-stack
     ```
 
-3. Deploy tvoje Ballerina aplikacije sa Helm chart-om:
+3.	Deploy your Ballerina application with the Helm chart:
 
     ```bash
     helm install ballerina-app ./helm/ballerina-app
     ```
 
-### 3. Pristup Prometheus i Grafana
+### 3. Access Prometheus and Grafana
 
-- **Prometheus**: Nađeš ga putem port-forwarding-a:
+- **Prometheus**: You can access it via port forwarding:
 
     ```bash
     kubectl port-forward svc/prometheus-operated 9090:9090
     ```
 
-    Onda, otvori [http://localhost:9090](http://localhost:9090) u tvom browseru.
+    Then, open [http://localhost:9090](http://localhost:9090) u tvom browseru.
 
-- **Grafana**: Možeš pristupiti putem port-forwarding-a:
+- **Grafana**: You can access it via port forwarding:
 
     ```bash
     kubectl port-forward svc/grafana 3000:80
     ```
 
-    Zatim otvori [http://localhost:3000](http://localhost:3000) u tvom browseru. Korisničko ime i lozinka su `admin/admin`.
+    Then open [http://localhost:3000](http://localhost:3000) in your browser.
+    The default username and password are `admin/admin`.
 
-### 4. Upozorenja i Alerting
+### 4. Alerts and Alerting
 
-Prometheus će automatski početi pratiti tvoje metrike. Ako latencija pređe prag ili se aplikacija ugasi, AlertManager će poslati obaveštenje prema podešenim pravilima.
+The application also exposes a health endpoint at port 8081. You can check the application status using:s using:our application goes down, AlertManager will send a notification based on the configured alerting rules.
 
-Da bi podesio e-mail notifikacije, izmeni `monitoring/alertmanager-config.yaml` fajl sa svojim SMTP podacima.
+To set up email notifications, modify `monitoring/alertmanager-config.yaml` file with your SMTP details.
 
 ### 5. Health Endpoint
 
