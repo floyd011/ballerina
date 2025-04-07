@@ -97,12 +97,9 @@ TheAdditional Configurationsxposes a health endpoint at port 8081. You can check
 curl http://<your-k8s-service-ip>:8081/healthz
 ```
 
-If everything is working correctly, you should see the response:`"OK"`.
+If you have any questions or need assistance, feel free to reach out!`.
 
 ## Additional Configurations
 
 If you wish to add more metrics or modify the existing ones, feel free to update the Ballerina code in `ballerina-app/main.bal` and the Helm chart configuration.
 
-## Kontakt
-
-Ako imaš bilo kakvih pitanja ili trebaš pomoć, slobodno se obrati!
