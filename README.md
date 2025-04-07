@@ -72,7 +72,7 @@ Before deploying the application, we need to set up Prometheus monitors via Helm
     kubectl port-forward svc/prometheus-operated 9090:9090
     ```
 
-    Then, open [http://localhost:9090](http://localhost:9090) u tvom browseru.
+    Then, open [http://localhost:9090](http://localhost:9090) in your browser.
 
 - **Grafana**: You can access it via port forwarding:
 
@@ -85,7 +85,7 @@ Before deploying the application, we need to set up Prometheus monitors via Helm
 
 ### 4. Alerts and Alerting
 
-The application also exposes a health endpoint at port 8081. You can check the application status using:s using:our application goes down, AlertManager will send a notification based on the configured alerting rules.
+Prometheus will automatically start tracking your metrics. If the latency crosses a threshold or if your application goes down, AlertManager will send a notification based on the configured alerting rules.
 
 To set up email notifications, modify `monitoring/alertmanager-config.yaml` file with your SMTP details.
 
