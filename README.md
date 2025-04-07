@@ -91,13 +91,13 @@ To set up email notifications, modify `monitoring/alertmanager-config.yaml` file
 
 ### 5. Health Endpoint
 
-Aplikacija takođe izlaže health endpoint na portu 8081. Možeš proveriti status aplikacije putem:
+TheAdditional Configurationsxposes a health endpoint at port 8081. You can check the application status using:
 
 ```bash
 curl http://<your-k8s-service-ip>:8081/healthz
 ```
 
-Ako sve funkcioniše, trebalo bi da vidiš odgovor: `"OK"`.
+If everything is working correctly, you should see the response:`"OK"`.
 
 ## Dodatna podešavanja
 
