@@ -1,0 +1,28 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: ballerina-alerts
+  labels:
+    release: monitoring
+spec:
+  groups:
+    - name: ballerina.rules
+      rules:
+        - alert: BallerinaHighLatency
+          expr: rate(ballerina_http_response_time_seconds_sum[1m]) 
+                / rate(ballerina_http_response_time_seconds_count[1m]) > 0.5
+          for: 1m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Visoka latencija na Ballerina servisu"
+            description: "Prosečna latencija > 500ms u poslednjem minutu."
+
+        - alert: BallerinaDown
+          expr: up{job="ballerina-app"} == 0
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Ballerina servis nije dostupan"
+            description: "Prometheus ne vidi metrike sa aplikacije."
