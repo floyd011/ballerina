@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "ballerina-app.fullname" . }}
+  labels:
+    {{- include "ballerina-app.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "ballerina-app.name" . }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "ballerina-app.name" . }}
+    spec:
+      containers:
+        - name: ballerina-app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.service.port }}
+              name: http
+            - containerPort: {{ .Values.metrics.port }}
+              name: metrics
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}

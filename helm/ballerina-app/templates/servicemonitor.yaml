@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "ballerina-app.fullname" . }}
+  labels:
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "ballerina-app.name" . }}
+  endpoints:
+    - port: metrics
+      path: /metrics
+      interval: 15s

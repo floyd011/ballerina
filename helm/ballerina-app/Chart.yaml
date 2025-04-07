@@ -1,0 +1,4 @@
+apiVersion: v2
+name: ballerina-app
+description: A Helm chart for Ballerina app
+version: 0.1.0
