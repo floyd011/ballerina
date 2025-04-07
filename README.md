@@ -97,7 +97,7 @@ TheAdditional Configurationsxposes a health endpoint at port 8081. You can check
 curl http://<your-k8s-service-ip>:8081/healthz
 ```
 
-If you have any questions or need assistance, feel free to reach out!`.
+If everything is working correctly, you should see the response: `"OK"`
 
 ## Additional Configurations
 
