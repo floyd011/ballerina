@@ -1,67 +1,31 @@
-# Welcome to the Portfolio of Milorad Spasić
+## Security & Compliance
 
-[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Contact](#contact)
+- Role-based access control (RBAC) and fine-grained permissions
+- Transparent Data Encryption (TDE) and row-level security
+- Dynamic Data Masking & Always Encrypted (SQL Server)
+- Data auditing, GDPR 
+- Secure database configurations and vulnerability assessments
 
-## Data Engineer & Database Architect
+## ETL & Data Integration
 
-A seasoned Data Engineer, DevOps Engineer, and Database Architect with two decades of experience in designing, optimizing, and managing high-performance data systems. The focus is on developing reliable data pipelines, architecting scalable and resilient databases, and deploying cloud-native solutions to enable real-time analytics and enterprise-level data processing.
+- SQL Server Integration Services (SSIS)
+- PostgreSQL Foreign Data Wrappers (FDW)
+- Data migration & transformation (ETL pipelines, CDC, bulk inserts)
+- JSON, XML, and CSV data handling
 
-### Core Expertise
+## Infrastructure & Automation
 
-- **Data Engineering & Architecture:**  
-  Proficiency in Python and SQL, with extensive experience in ETL/ELT frameworks including Debezium, Kafka, Greenplum, and Hadoop, enabling robust real-time data streaming and analytics.
+- Scripting automation with Python and Bash
+- Database infrastructure as code (IaC) using Terraform
+- Containerization with Docker for PostgreSQL
+- Cloud database management (Azure SQL, Amazon RDS, Google Cloud SQL)
+- Database monitoring with Prometheus, Grafana, and SQL Server Profiler
 
-- **Database Administration & Optimization:**  
-  Over 20 years of experience managing SQL Server, PostgreSQL, and distributed databases, with deep expertise in query optimization, high availability configurations, and disaster recovery strategies.
-
-- **DevOps & Cloud Solutions:**  
-  Expertise in Docker, Kubernetes, Terraform, Ansible, and cloud platforms such as AWS and GCP. Skilled in implementing infrastructure as code (IaC) and building efficient CI/CD pipelines.
-
-- **Microservices & Automation:**  
-  Development of containerized, event-driven microservices and adoption of GitOps workflows for building scalable and resilient data platforms.
-
-- **Performance & Security:**  
-  Advanced knowledge of indexing techniques, data partitioning, replication, and compliance with regulatory standards such as GDPR and HIPAA.
-
-### Professional Impact
-
-- Designed and implemented real-time analytics platforms capable of processing millions of events daily using technologies like Kafka, Python, and Kubernetes.  
-- Optimized high-throughput transactional databases for enterprise clients, achieving up to 60% reduction in query execution times and improved system resilience.  
-- Led seamless migrations from Microsoft SQL Server to PostgreSQL, ensuring minimal downtime and data integrity throughout the transition.  
-- Architected cloud-based data solutions that enhanced scalability, operational efficiency, and cost-effectiveness.
-
-This portfolio reflects a results-oriented engineering approach focused on data-driven innovation, cloud transformation, and automation—bridging the gap between data, DevOps, and engineering excellence.
-
----
-
-# Skills
-
-[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Contact](#contact)
-
-## Technical Skills
-
-- **Data Integration Tools:**  
-  Debezium, Kafka  
-
-- **Databases:**  
-  Microsoft SQL Server, MySQL, Oracle, PostgreSQL, Vertica, Greenplum  
-
-- **Programming Languages:**  
-  Python (data processing and pipeline orchestration), Bash  
-
-- **Containerization & Orchestration:**  
-  Docker, Kubernetes  
-
-- **CI/CD and Infrastructure as Code:**  
-  GitHub Actions, Ansible, Terraform, Pulumi  
-
-- **Monitoring & Logging:**  
-  Prometheus, Grafana, Graylog  
-
-- **Data Architecture:**  
-  Event-driven architecture, Microservices, Real-time data processing pipelines  
+----
 
 ## Certifications
+
+[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Certifications](#certifications) &nbsp; &nbsp;[Contact](#contact)
 
 - HP ASE – Vertica Big Data Solutions Administrator  
 - Pivotal Greenplum Database Administrator  
@@ -72,7 +36,7 @@ This portfolio reflects a results-oriented engineering approach focused on data-
 
 # Projects
 
-[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Contact](#contact)
+[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Certifications](#certifications) &nbsp; &nbsp;[Contact](#contact)
 
 ## Project Highlights
 
@@ -112,7 +76,7 @@ This portfolio reflects a results-oriented engineering approach focused on data-
 
 # Experience
 
-[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Contact](#contact)
+[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Certifications](#certifications) &nbsp; &nbsp;[Contact](#contact)
 
 ## Professional Experience
 
@@ -151,7 +115,7 @@ This portfolio reflects a results-oriented engineering approach focused on data-
 
 # Contact
 
-[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Contact](#contact)
+[Home](#welcome-to-the-portfolio-of-milorad-spasić) &nbsp; &nbsp; [Skills](#skills) &nbsp; &nbsp;[Projects](#projects) &nbsp; &nbsp;[Experience](#experience) &nbsp; &nbsp;[Certifications](#certifications) &nbsp; &nbsp;[Contact](#contact)
 
   - email: [Milorad Spasic](mailto:milorad.spasic@datameshsync.info)
   - Linkedin: [Linkedin](https://www.linkedin.com/in/milorad-spasic)
