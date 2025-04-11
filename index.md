@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Portfolio
-og_image: "/assets/images/homepage-og.jpg"
 ---
 
 # Welcome to the Portfolio of Milorad Spasić
