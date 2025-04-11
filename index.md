@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Portfolio"
+title: "Portfolio of Milorad Spasić"
 ---
 # Welcome to the Portfolio of Milorad Spasić
 
